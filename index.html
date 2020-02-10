@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<section class="product-page">
+    <div class="overlay visible">
+        <div class="pop-up">
+            <h3 class= "pop-up__title">Выберите режим отображения пиццы</h3>
+            <div class="pop-up__buttons">
+                <a href="#" class="pop-up__button pop-up__button--tile"> <span class='pop-up__icon icon-tile'></span> <span>в виде сетки</span> </a>
+                <a href="#" class="pop-up__button pop-up__button--list"><span class='pop-up__icon icon-list'></span> <span>в виде списка</span> </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <h1 class="products-page__title">
+                Пицца
+            </h1>
+            <div class="navigation">
+                <div>
+                    <span>Название</span>
+                    <select class='names-select'>
+                        <option value="none">----</option>
+                        <option value="namesToLow">В алфавитном порядке</option>
+                        <option value="namesToHigh">В обратном алфавитном порядке</option>
+                    </select>
+                </div>
+                <div>
+                    <span>Цена</span>
+                    <select class='price-select'>
+                        <option value="none">----</option>
+                        <option value="priceToLow">От большей к меньшей</option>
+                        <option value="priceToHigh">От меньшей к большей</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-wrapper">
+                <div class="products-filter">
+                    <h4 class="products-filter__ingredients">
+                        Ингредиенты
+                    </h4>
+                    <ul class="products-filter__ingredients-list">
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="huntingSausages" id='huntingSausages' class='products-filter__checkbox'><label>Колбаски охотничьи</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="tomatoSauce" id='tomatoSauce' class='products-filter__checkbox'><label>Cоус томатный</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="redOnion" id='redOnion' class='products-filter__checkbox'><label>Лук красный</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="blackOlives" id='blackOlives' class='products-filter__checkbox'><label>Маслины</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="mozarella" id='mozarella' class='products-filter__checkbox'><label>сыр моцарелла</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="oregano" id='oregano' class='products-filter__checkbox'><label>орегано</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="parsley" id='parsley' class='products-filter__checkbox'><label>петрушка</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="oliveOil" id='oliveOil' class='products-filter__checkbox'><label>Масло оливковое</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="cream" id='cream' class='products-filter__checkbox'><label>Сливки</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="champignon" id='champignon' class='products-filter__checkbox'><label>шампиньоны</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="chickenFillet" id='chickenFillet' class='products-filter__checkbox'><label>Филе куриное</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="pork" id='pork' class='products-filter__checkbox'><label>свинина</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="cherryTomatoes" id='cherryTomatoes' class='products-filter__checkbox'><label>помидоры черри</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="parmesan" id='parmesan' class='products-filter__checkbox'><label>сыр пармезан</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="basil" id='basil' class='products-filter__checkbox'><label>базилик</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="bacon" id='bacon' class='products-filter__checkbox'><label>бекон</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="sweetAndSourSauce" id='sweetAndSourSauce' class='products-filter__checkbox'><label>Соус кисло-сладкий</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="pineapple" id='pineapple' class='products-filter__checkbox'><label>ананасы</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="bulgarianPepper" id='bulgarianPepper' class='products-filter__checkbox'><label>перец болгарский</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="ham" id='ham' class='products-filter__checkbox'><label>Ветчина</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="salami" id='salami' class='products-filter__checkbox'><label>Салями</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="pepperoni" id='pepperoni' class='products-filter__checkbox'><label>Пепперони</label></li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="sausages" id='sausages' class='products-filter__checkbox'><label></label>Колбаски</li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="edam" id='edam' class='products-filter__checkbox'><label></label>Сыр Эдам</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="pepperoniSausages" id='pepperoniSausages' class='products-filter__checkbox'><label></label>Колбаски Пепперони</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="smokedChiken" id='smokedChiken' class='products-filter__checkbox'><label></label>Копченная курица</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="dorBlue" id='dorBlue' class='products-filter__checkbox'><label></label>Сыр Дорблю</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="homeMadeSausages" id='homeMadeSausages' class='products-filter__checkbox'><label></label>Домашние колбаски</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="feta" id='feta' class='products-filter__checkbox'><label></label>Сыр Фета</li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="brie" id='brie' class='products-filter__checkbox'><label></label>Сыр бри</li><br />
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="mustard" id='mustard' class='products-filter__checkbox'><label></label>Горчица</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="barbecueSauce" id='barbecueSauce' class='products-filter__checkbox'><label></label>Соус барбекю</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="pickledHotPeppers" id='pickledHotPeppers' class='products-filter__checkbox'><label></label>Острый перец маринованый</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="groundBeef" id='groundBeef' class='products-filter__checkbox'><label></label>Фарш говячжий</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="smokedCheesePigtail" id='smokedCheesePigtail' class='products-filter__checkbox'><label></label>Сыр копченый косичка</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="tigerShrimp" id='tigerShrimp' class='products-filter__checkbox'><label></label>Королевская криветка</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="cheeseSauce" id='cheeseSauce' class='products-filter__checkbox'><label></label>Сырный соус</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="smokedSalmon" id='smokedSalmon' class='products-filter__checkbox'><label></label>Копченый лосось</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="corn" id='corn' class='products-filter__checkbox'><label></label>Кукуруза</li>
+                        <li class='products-filter__ingredients-item'><input type="checkbox" name="blackEyedPeas" id='blackEyedPeas' class='products-filter__checkbox'><label></label>Спаржевая фасоль</li>
+                    </ul>
+
+                </div>
+                <div class="products-list">
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+</section>
+</body>
+
+<script src="goods.js"></script>
+<script src="products.js"></script>
+</html>
