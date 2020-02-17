@@ -12,12 +12,10 @@
 </head>
 <body>
 <section class="product-page">
-    <div class="overlay visible">
+    <div class="overlay">
         <div class="pop-up">
-            <h3 class= "pop-up__title">Выберите режим отображения пиццы</h3>
-            <div class="pop-up__buttons">
-                <a href="#" class="pop-up__button pop-up__button--tile"> <span class='pop-up__icon icon-tile'></span> <span>в виде сетки</span> </a>
-                <a href="#" class="pop-up__button pop-up__button--list"><span class='pop-up__icon icon-list'></span> <span>в виде списка</span> </a>
+            <a href='#' class="pop-up__close">&#10006;</a>
+            <div class="pop-up-content">
             </div>
         </div>
     </div>
@@ -28,23 +26,30 @@
                 Пицца
             </h1>
             <div class="navigation">
-                <div>
-                    <span>Название</span>
-                    <select class='names-select'>
-                        <option value="none">----</option>
-                        <option value="namesToLow">В алфавитном порядке</option>
-                        <option value="namesToHigh">В обратном алфавитном порядке</option>
-                    </select>
+                <div class="navigation-appearance">
+                    <a href="#" class="tile icon-tile" title='отображение в виде сетки'></a>
+                    <a href="#" class="list icon-list" title = 'отображение в виде списка'></a>
                 </div>
-                <div>
-                    <span>Цена</span>
-                    <select class='price-select'>
-                        <option value="none">----</option>
-                        <option value="priceToLow">От большей к меньшей</option>
-                        <option value="priceToHigh">От меньшей к большей</option>
-                    </select>
+                <div class="sort-wrapper">
+                    <div>
+                        <span>Название</span>
+                        <select class='names-select'>
+                            <option value="none">----</option>
+                            <option value="namesToLow">В алфавитном порядке</option>
+                            <option value="namesToHigh">В обратном алфавитном порядке</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Цена</span>
+                        <select class='price-select'>
+                            <option value="none">----</option>
+                            <option value="priceToLow">От большей к меньшей</option>
+                            <option value="priceToHigh">От меньшей к большей</option>
+                        </select>
+                    </div>
                 </div>
             </div>
+
             <div class="products-wrapper">
                 <div class="products-filter">
                     <h4 class="products-filter__ingredients">
@@ -98,12 +103,13 @@
 
                 </div>
             </div>
-
         </div>
+
     </main>
 </section>
 </body>
 
 <script src="goods.js"></script>
 <script src="products.js"></script>
+
 </html>

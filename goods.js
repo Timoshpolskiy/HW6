@@ -1,242 +1,128 @@
 'use strict';
+let huntingSausages = {name: "колбаски охотничьи", price: 28, calories: 120, amount: 1};
+let tomatoSauce = {name: "соус томатный", price: 5, calories: 8, amount: 1};
+let barbecueSauce = {name: "соус Барбекю", price: 8, calories: 18, amount: 1};
+let cheeseSauce = {name: "соус сырный", price: 3, calories: 5, amount: 1};
+let redOnion = {name: "лук красный", price: 6, calories: 10, amount: 1};
+let oliveOil = {name: "масло оливковое", price: 8, calories: 5, amount: 1};
+let mozarella = {name: "сыр моцарелла", price: 15, calories: 30, amount: 1};
+let oregano = {name: "орегано", price: 17, calories: 7, amount: 1};
+let parsley = {name: "петрушка", price: 4, calories: 3, amount: 1};
+let homeMadeSausages = {name: "домашние сосиски", price: 42, calories: 128, amount: 1};
+let cream = {name: "сливки", price: 6, calories: 6, amount: 1};
+let champignon = {name: "шампиньоны", price: 23, calories: 21, amount: 1};
+let chickenFillet = {name: "филе куриное", price: 20, calories: 100, amount: 1};
+let smokedChiken = {name: "курица копченная", price: 50, calories: 150, amount: 1};
+let smokedSalmon = {name: "лосось копченный", price: 80, calories: 110, amount: 1};
+let pork = {name: "свинина", price: 27, calories: 115, amount: 1};
+let cherryTomatoes = {name: "помидоры черри", price: 16, calories: 14, amount: 1};
+let parmesan = {name: "сыр пармезан", price: 18, calories: 25, amount: 1};
+let basil = {name: "базилик", price: 7, calories: 5, amount: 1};
+let bacon = {name: "бекон", price: 29, calories: 125, amount: 1};
+let sweetAndSourSauce = {name: "Соус кисло-сладкий", price: 8, calories: 6, amount: 1};
+let pineapple = {name: "ананасы", price: 21, calories: 15, amount: 1};
+let bulgarianPepper = {name: "перец болгарский", price: 9, calories: 12, amount: 1};
+let tomato = {name: "помидор", price: 14, calories: 11, amount: 1};
+let mustard = {name: "горчица", price: 3, calories: 7, amount: 1};
+let ham = {name: "ветчина", price: 24, calories: 123, amount: 1};
+let salami = {name: "салями", price: 29, calories: 126, amount: 1};
+let pepperoni = {name: "пепперони", price: 28, calories: 115, amount: 1};
+let sausages = {name: "колбаски", price: 25, calories: 110, amount: 1};
+let pepperoniSausages = {name: "колбаски Пепперони", price: 35, calories: 130, amount: 1};
+let feta = {name: "сыр Фета", price: 28, calories: 32, amount: 1};
+let brie = {name: "сыр Бри", price: 23, calories: 31, amount: 1};
+let edam = {name: "сыр Эдам", price: 25, calories: 35, amount: 1};
+let dorBlue = {name: "сыр Дорблю", price: 45, calories: 45, amount: 1};
+let tigerShrimp = {name: "королевская криветка", price: 145, calories: 125, amount: 1};
+let pickledHotPeppers = {name: "Острый перец маринованый", price: 16, calories: 4, amount: 1};
+let groundBeef = {name: "говяжий фарш", price: 43, calories: 125, amount: 1};
+let smokedCheesePigtail = {name: "Сыр копченый косичка", price: 15, calories: 9, amount: 1};
+let blackEyedPeas = {name: "Спаржевая фасоль", price: 14, calories: 8, amount: 1};
+let corn = {name: "кукуруза", price: 8, calories: 5, amount: 1};
+let blackOlives = {name: "маслины", price: 5, calories: 5, amount: 1};
+
 const  goods = [
     {
         name: "Пеперони",
-        price: "200 грн",
         img: "img/pizza1.png",
-        calories: 700,
-        composition: {
-                oliveOil: "Масло оливковое",
-                basil: "Базилик",
-                tomatoSauce:"Соус томатный",
-                mozarella:" Сыр моцарелла",
-                sausages: "колбаски",
-                pepperoni: "пеперони",}
+        composition: {oliveOil,basil,tomatoSauce,mozarella,sausages,pepperoni,}
     },
     {
         name: "Жульен",
-        price: "230 грн",
         img: "img/pizza2.png",
-        calories: 650,
-        composition:{
-                champignon:"Шампиньоны",
-                redOnion: "Лук красный",
-                parsley:"Петрушка",
-                mozarella:"Сыр моцарелла",
-                edam:"Сыр эдам",
-                cream:"сливки",
-                chickenFillet:"Филе куриное"}
+        composition:{champignon, redOnion, parsley, mozarella, edam, cream, chickenFillet}
 
 
     },
     {
         name: "Мясное ассорти",
-        price: "260 грн",
         img: "img/pizza3.png",
-        calories: 800,
-        composition: {
-                oregano:"Орегано",
-                oliveOil:"Масло оливковое",
-                champignon:"Шампиньоны",
-                huntingSausages:"Колбаски охотничьи",
-                pepperoniSausages: "Колбаски пеперони",
-                smokedChiken:"Курица копченая",
-                bulgarianPepper:"Перец болгарский",
-                pork:"Свинина",
-                tomatoSauce:"Соус томатный",
-                mozarella:"Сыр моцарелла"}
+        composition: {oregano, oliveOil, champignon, huntingSausages, pepperoniSausages, smokedChiken, bulgarianPepper, pork, tomatoSauce, mozarella}
     },
     {
         name: "Четыре сыра",
-        price: "270 грн",
         img: "img/pizza4.png",
-        calories: 500,
-        composition: {
-                parmesan:"Сыр пармезан",
-                dorBlue:"Сыр Дорблю",
-                mozarella:"Сыр моцарелла",
-                edam:"Сыр эдам",
-                cream:"сливки"}
+        composition: {parmesan, dorBlue, mozarella, edam, cream}
     },
     {
         name: "Мюнхенская",
-        price: "260 грн",
         img: "img/pizza5.png",
-        calories: 830,
-        composition:{
-                oliveOil:"Масло оливковое",
-                salami:"Салями",
-                huntingSausages:"Колбаски охотничьи",
-                pepperoniSausages:"Колбаски пеперони",
-                homeMadeSausages:"Колбаски домашние",
-                redOnion:"Лук красный",
-                parsley:"Петрушка",
-                mozarella:"Сыр моцарелла",
-                sweetAndSourSauce:"Соус кисло-сладкий"}
+        composition:{oliveOil, salami, huntingSausages, pepperoniSausages, homeMadeSausages, redOnion, parsley, mozarella, sweetAndSourSauce}
     },
     {
         name: "Пять сыров",
-        price: "290 грн",
         img: "img/pizza6.png",
-        calories:700,
-        composition: {
-                feta:"Сыр фета",
-                dorBlue:"Сыр Дорблю",
-                mozarella:"Сыр моцарелла",
-                edam:"Сыр эдам",
-                cream:"сливки",
-                brie:"Сыр бри"}
+        composition: {feta, dorBlue, mozarella, edam, cream, brie}
     },
     {
         name: "Дон Бекон",
-        price: "250 грн",
         img: "img/pizza7.png",
-        calories:650,
-        composition:{
-                oregano:"Орегано",
-                oliveOil:"Масло оливковое",
-                bacon:"Бекон",
-                pepperoniSausages:"Колбаски пеперони",
-                redOnion:"Лук красный",
-                tomatoSauce:"Соус томатный",
-                mozarella:"Сыр моцарелла",
-                chickenFillet:"Филе куриное"}
+        composition:{oregano, oliveOil, bacon, pepperoniSausages, redOnion, tomatoSauce, mozarella, chickenFillet}
     },
     {
         name: "Кальцоне Бьянка  ",
-        price: "230 грн",
         img: "img/pizza8.png",
-        calories:625,
-        composition: {
-                ham:"Ветчина",
-                champignon:"Шампиньоны",
-                dorBlue:"Сыр Дорблю",
-                mozarella:"Сыр моцарелла",
-                cream:"сливки",
-                mustard:"Горчица"}
+        composition: {ham, champignon, dorBlue, mozarella, cream, mustard}
     },
     {
         name: "Баварская",
-        price: "245 грн",
         img: "img/pizza9.png",
-        calories: 900,
-        composition: {
-                oliveOil:"Масло оливковое",
-                champignon:"Шампиньоны",
-                huntingSausages:"Колбаски охотничьи",
-                pepperoniSausages:"Колбаски пеперони",
-                homeMadeSausages:"Колбаски домашние",
-                bulgarianPepper:"Перец болгарский",
-                parsley:"Петрушка",
-                tomatoSauce:"Соус томатный",
-                mozarella:"Сыр моцарелла",
-                mustard:"Горчица"}
+        composition: {oliveOil, champignon, huntingSausages, pepperoniSausages, homeMadeSausages, bulgarianPepper, parsley, tomatoSauce,mozarella, mustard}
 
     },
     {
         name: "Мексиканская",
-        price: "300 грн",
         img: "img/pizza10.png",
-        calories:870,
-        composition: {
-                oliveOil:"Масло оливковое",
-                bacon:"Бекон",
-                pepperoniSausages:"Колбаски пеперони",
-                redOnion:"Лук красный",
-                cherryTomatoes:"Помидоры черри",
-                mozarella:"Сыр моцарелла",
-                chickenFillet:"Филе куриное",
-                barbecueSauce:"Соус барбекю",
-                pickledHotPeppers:"Острый перец маринованый",
-                groundBeef:"Фарш говяжий"}
+        composition: {oliveOil, bacon, pepperoniSausages, redOnion, cherryTomatoes, mozarella, chickenFillet, barbecueSauce, pickledHotPeppers, groundBeef}
 
     },
     {
         name: "Барбекю",
-        price: "265 грн",
         img: "img/pizza11.png",
-        calories:920,
-        composition: {
-                oliveOil:"Масло оливковое",
-                bacon:"Бекон",
-                huntingSausages:"Колбаски охотничьи",
-                smokedChiken:"Курица копченая",
-                parsley:"Петрушка",
-                mozarella:"Сыр моцарелла",
-                smokedCheesePigtail:"Сыр копченый косичка",
-                barbecueSauce:"Соус барбекю"}
+        composition: {oliveOil, bacon, huntingSausages, smokedChiken, parsley, mozarella, smokedCheesePigtail, barbecueSauce}
     },
     {
         name: "Дольче",
-        price: "340 грн",
         img: "img/pizza12.png",
-        calories:560,
-        composition: {
-                pineapple:"Ананас",
-                mozarella:"Сыр моцарелла",
-                edam:"Сыр эдам",
-                chickenFillet:"Филе куриное",
-                tigerShrimp:"Креветка тигровая",
-                cheeseSauce:"Сырный соус"}
+        composition: {pineapple, mozarella, edam, chickenFillet, tigerShrimp, cheeseSauce}
 
     },
     {
         name: "Маргарита",
-        price: "200 грн",
         img: "img/pizza13.png",
-        calories:740,
-        composition: {
-                oliveOil:"Масло оливковое",
-                basil:"Базилик",
-                tomato:"Помидор",
-                tomatoSauce:"Соус томатный",
-                mozarella:"Сыр моцарелла"}
+        composition: {oliveOil, basil, tomato, tomatoSauce, mozarella}
 
     },
     {
         name: "Королевская",
-        price: "350 грн",
         img: "img/pizza14.png",
-        calories:725,
-        composition: {
-                blackOlives:"Маслины",
-                smokedSalmon:"Лосось копченый",
-                mozarella:"Сыр моцарелла",
-                cream:"сливки",
-                tigerShrimp:"Креветка тигровая"}
+        composition: {blackOlives, smokedSalmon, mozarella, cream, tigerShrimp}
 
     },
     {
         name: "Вегетарианская",
-        price: "215 грн",
         img: "img/pizza15.png",
-        calories:430,
-        composition: {
-                oliveOil:"Масло оливковое",
-                basil:"Базилик",
-                champignon:"Шампиньоны",
-                bulgarianPepper:"Перец болгарский",
-                tomato:"Помидор",
-                tomatoSauce:"Соус томатный",
-                blackEyedPeas:"Спаржевая фасоль",
-                mozarella:"Сыр моцарелла",
-                corn:"кукуруза"}
+        composition: {oliveOil, basil, champignon, bulgarianPepper, tomato, tomatoSauce, blackEyedPeas, mozarella, corn}
 
     }
 ];
-
-// console.log(goods);
-//
-// let out = '';
-//
-// for(let key in goods) {
-//     out += '<img src = "'+goods[key].img+'" width="80px" height="80px">'
-//     out += 'Название: '+goods[key].name + '</br>'
-//     out += 'Цена: '+goods[key].price + '</br>'
-//     out += 'Каллории: '+goods[key].calories + '</br>'
-//     out += 'Состав: '+goods[key].composition + '</br>'
-// }
-//
-// document.getElementById('out'). innerHTML = out;
-
-
