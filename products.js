@@ -44,13 +44,11 @@ function sortNamesToHigh(goods){
     goods.sort((a, b) => a.name.replace(/ /g, "") < b.name.replace(/ /g, "") ? 1 : -1);
 }
 function sortPricesToHigh(goods){
-    goods.sort(function (a, b) {
-        return +a.price.replace(/\D/g, "") > +b.price.replace(/\D/g, "") ? 1 : -1});
+    goods.sort((a, b) => a.price - b.price);
 }
 
 function sortPricesToLow(goods){
-    goods.sort(function (a, b) {
-        return +a.price.replace(/\D/g, "") > +b.price.replace(/\D/g, "") ? -1 : 1});
+    goods.sort((a, b) => b.price - a.price);
 }
 let filteredArr = [];
 function filterIngredients(checkedIngredientes, goods){
@@ -109,7 +107,7 @@ function renderProducts(goods, productsView){
             }
             var changeIngredientes = document.createElement('a');
             changeIngredientes.href = '#';
-            changeIngredientes.classList.add('prouct-card__add-ingredients');
+            changeIngredientes.classList.add('product-card__add-ingredients');
             changeIngredientes.innerText = 'Изменить состав пиццы';
             var productCardCalorie = document.createElement('div');
             productCardCalorie.classList.add('product-card__calorie');
@@ -135,6 +133,11 @@ function renderProducts(goods, productsView){
             }
             goods[i].price = priceSum;
             productCardPriceValue.innerText = priceSum + " грн.";
+
+            var addToCartProduct = document.createElement('a');
+            addToCartProduct.href = '#';
+            addToCartProduct.classList.add('product-card__add-cart');
+            addToCartProduct.innerText = 'Добавить в корзину';
             var productCardImg = document.createElement('div');
             productCardImg.classList.add('product-card__img');
             productCardImg.setAttribute("style", "background-image: url(" + goods[i].img + ")");
@@ -147,6 +150,7 @@ function renderProducts(goods, productsView){
             cardSideFront.append(changeIngredientes);
             cardSideFront.append(productCardCalorie);
             cardSideFront.append(productCardPrice);
+            cardSideFront.append(addToCartProduct);
             cardSideBack.append(productCardImg);
             productCardIngredients.append(productCardIngredientsTitle);
             productCardIngredients.append(ingredientsList);
@@ -168,13 +172,18 @@ function renderProducts(goods, productsView){
             productCardName.innerText = goods[i].name;
             var productCardPriceList = document.createElement('h5');
             productCardPriceList.classList.add('product-card-price-list');
-            productCardPriceList.innerText = goods[i].price;
+            productCardPriceList.innerText = goods[i].price + " грн.";
+            var basket = document.createElement('button');
+            basket.href = '#';
+            basket.classList.add('product-card__basket');
+            basket.innerText = 'Добавить в корзину';
 
             productsList.append(productCard);
             productCard.append(productCardLogo);
             productCard.append(productCardInfo);
             productCardInfo.append(productCardName);
             productCardInfo.append(productCardPriceList);
+            // productsList.append(basket);
         }
     }
 }
@@ -353,14 +362,20 @@ let popUpContent = document.querySelector('.pop-up-content');
 let body = document.querySelector('body');
 if(productsView === 'tile'){
     allCardsTiles.addEventListener( 'click', function(e) {
-        if(e.target.closest('.product-card') && e.target.closest('.prouct-card__add-ingredients') === null){
+        if(e.target.closest('.product-card') && e.target.closest('.product-card__add-ingredients') === null && e.target.closest('.product-card__add-cart') === null){
             e.target.closest('.product-card').classList.toggle('rotated');
-        } else if(e.target.closest('.prouct-card__add-ingredients')){
+        } else if(e.target.closest('.product-card__add-ingredients')){
             createAllIngredients(allIngredientes);
             target = e.target;
             overlay.classList.add('visible');
             body.classList.add('overflow');
             renderPopup(target);
+        } else if(e.target.closest('.product-card__add-cart')){
+            for(let i = 0; i< goods.length; i++){
+                if(e.target.parentElement.querySelector('.product-card__name').innerText === goods[i].name){
+                    cartNumbers(goods[i]);
+                }
+            }
         }
     });
 }

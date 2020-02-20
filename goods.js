@@ -45,84 +45,99 @@ const  goods = [
     {
         name: "Пеперони",
         img: "img/pizza1.png",
-        composition: {oliveOil,basil,tomatoSauce,mozarella,sausages,pepperoni,}
+        composition: {oliveOil,basil,tomatoSauce,mozarella,sausages,pepperoni},
+        inCart: 0
     },
     {
         name: "Жульен",
         img: "img/pizza2.png",
-        composition:{champignon, redOnion, parsley, mozarella, edam, cream, chickenFillet}
-
+        composition:{champignon, redOnion, parsley, mozarella, edam, cream, chickenFillet},
+        inCart: 0
 
     },
     {
         name: "Мясное ассорти",
         img: "img/pizza3.png",
-        composition: {oregano, oliveOil, champignon, huntingSausages, pepperoniSausages, smokedChiken, bulgarianPepper, pork, tomatoSauce, mozarella}
+        composition: {oregano, oliveOil, champignon, huntingSausages, pepperoniSausages, smokedChiken, bulgarianPepper, pork, tomatoSauce, mozarella},
+        inCart: 0
     },
     {
         name: "Четыре сыра",
         img: "img/pizza4.png",
-        composition: {parmesan, dorBlue, mozarella, edam, cream}
+        composition: {parmesan, dorBlue, mozarella, edam, cream},
+        inCart: 0
     },
     {
         name: "Мюнхенская",
         img: "img/pizza5.png",
-        composition:{oliveOil, salami, huntingSausages, pepperoniSausages, homeMadeSausages, redOnion, parsley, mozarella, sweetAndSourSauce}
+        composition:{oliveOil, salami, huntingSausages, pepperoniSausages, homeMadeSausages, redOnion, parsley, mozarella, sweetAndSourSauce},
+        inCart: 0
     },
     {
         name: "Пять сыров",
         img: "img/pizza6.png",
-        composition: {feta, dorBlue, mozarella, edam, cream, brie}
+        composition: {feta, dorBlue, mozarella, edam, cream, brie},
+        inCart: 0
     },
     {
         name: "Дон Бекон",
         img: "img/pizza7.png",
-        composition:{oregano, oliveOil, bacon, pepperoniSausages, redOnion, tomatoSauce, mozarella, chickenFillet}
+        composition:{oregano, oliveOil, bacon, pepperoniSausages, redOnion, tomatoSauce, mozarella, chickenFillet},
+        inCart: 0
+    },
+
+    {
+        name: "Баварская",
+        img: "img/pizza9.png",
+        composition: {oliveOil, champignon, huntingSausages, pepperoniSausages, homeMadeSausages, bulgarianPepper, parsley, tomatoSauce,mozarella, mustard},
+        inCart: 0
+
     },
     {
         name: "Кальцоне Бьянка  ",
         img: "img/pizza8.png",
-        composition: {ham, champignon, dorBlue, mozarella, cream, mustard}
-    },
-    {
-        name: "Баварская",
-        img: "img/pizza9.png",
-        composition: {oliveOil, champignon, huntingSausages, pepperoniSausages, homeMadeSausages, bulgarianPepper, parsley, tomatoSauce,mozarella, mustard}
-
+        composition: {ham, champignon, dorBlue, mozarella, cream, mustard},
+        inCart: 0
     },
     {
         name: "Мексиканская",
         img: "img/pizza10.png",
-        composition: {oliveOil, bacon, pepperoniSausages, redOnion, cherryTomatoes, mozarella, chickenFillet, barbecueSauce, pickledHotPeppers, groundBeef}
+        composition: {oliveOil, bacon, pepperoniSausages, redOnion, cherryTomatoes, mozarella, chickenFillet, barbecueSauce, pickledHotPeppers, groundBeef},
+        inCart: 0
 
     },
     {
         name: "Барбекю",
         img: "img/pizza11.png",
-        composition: {oliveOil, bacon, huntingSausages, smokedChiken, parsley, mozarella, smokedCheesePigtail, barbecueSauce}
+        composition: {oliveOil, bacon, huntingSausages, smokedChiken, parsley, mozarella, smokedCheesePigtail, barbecueSauce},
+        inCart: 0
     },
     {
         name: "Дольче",
         img: "img/pizza12.png",
-        composition: {pineapple, mozarella, edam, chickenFillet, tigerShrimp, cheeseSauce}
+        composition: {pineapple, mozarella, edam, chickenFillet, tigerShrimp, cheeseSauce},
+        inCart: 0
 
     },
     {
         name: "Маргарита",
         img: "img/pizza13.png",
-        composition: {oliveOil, basil, tomato, tomatoSauce, mozarella}
+        composition: {oliveOil, basil, tomato, tomatoSauce, mozarella},
+        inCart: 0
 
     },
     {
         name: "Королевская",
         img: "img/pizza14.png",
-        composition: {blackOlives, smokedSalmon, mozarella, cream, tigerShrimp}
+        composition: {blackOlives, smokedSalmon, mozarella, cream, tigerShrimp},
+        inCart: 0
 
     },
     {
         name: "Вегетарианская",
         img: "img/pizza15.png",
-        composition: {oliveOil, basil, champignon, bulgarianPepper, tomato, tomatoSauce, blackEyedPeas, mozarella, corn}
+        composition: {oliveOil, basil, champignon, bulgarianPepper, tomato, tomatoSauce, blackEyedPeas, mozarella, corn},
+        inCart: 0
 
     }
 ];
